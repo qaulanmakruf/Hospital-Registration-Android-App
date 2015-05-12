@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hospital</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_edit">Update/Edit</string>
+    <string name="action_save">Save</string>
+    <string name="action_nurse">New Nurse</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_patient_list">Patient List</string>
+    <string name="title_activity_patient">Patient</string>
+    <string name="list_p">List of Patients:</string>
+    <string name="search">Search by Health Card Number</string>
+    <string name="title_activity_new_patient">Create New Patient</string>
+    <string name="newpatient">New Patient</string>
+    <string name="create_new_patient">Create New Patient</string>
+    <string name="patient_name_label">Name:</string>
+    <string name="patient_date_label">Birth Date:</string>
+    <string name="arrival_date_label">Arrival date:</string>
+    <string name="patient_hcn_label">Health Card Number:</string>
+    <string name="temperature_label">Temperature:</string>
+    <string name="blood_pressure_label">Blood Pressure:</string>
+    <string name="heart_rate_label">Heart Rate:</string>
+    <string name="symptoms_label">Symptoms:</string>
+    <string name="day_hint">DD</string>
+    <string name="month_hint">MM</string>
+    <string name="year_hint">YYYY</string>
+    <string name="patient_vital_title">Record Initial Set Of Vitals</string>
+    <string name="systolic">Systolic</string>
+    <string name="diastolic">Diastolic</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="database">New Patient Database</string>
+    
+   
+
+</resources>

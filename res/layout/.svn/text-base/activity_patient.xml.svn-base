@@ -1,0 +1,305 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".PatientActivity" >
+    <ScrollView
+    	android:layout_width="fill_parent"
+  		android:layout_height="fill_parent">
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content">
+    <RelativeLayout
+	    android:id="@+id/view"
+	    android:layout_width="match_parent"
+    	android:layout_height="match_parent">
+    
+        
+	    <TextView
+           android:id="@+id/name_label"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:text="@string/patient_name_label" />
+       
+       <TextView 
+           android:id="@+id/name"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"/>
+       
+       <TextView
+           android:id="@+id/birth_date_label"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:layout_below="@+id/name_label"
+           android:text="@string/patient_date_label" />
+       
+       <TextView 
+           android:id="@+id/birth_date"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_below="@+id/name"
+           android:layout_height="48dp"/>
+       
+       <TextView
+           android:id="@+id/hcn_label"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:layout_below="@+id/birth_date_label"
+           android:text="@string/patient_hcn_label" />
+       
+       <TextView 
+           android:id="@+id/hcn"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_below="@+id/birth_date"
+           android:layout_height="48dp"/>
+       
+       <TextView
+           android:id="@+id/arrival_time_label"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:layout_below="@+id/hcn_label"
+           android:text="@string/arrival_date_label" />
+       
+       <TextView 
+           android:id="@+id/arrival_time"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_below="@+id/hcn"
+           android:layout_height="48dp"/>
+       
+       <TextView
+           android:id="@+id/temperature_label"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:layout_below="@+id/arrival_time_label"
+           android:text="@string/temperature_label" />
+       
+       <TextView
+           android:id="@+id/temperature"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_below="@+id/arrival_time"
+           android:layout_height="48dp"
+           android:onClick="temperatureHistory"
+           android:clickable="true"/>
+       
+       <TextView
+           android:id="@+id/blood_pressure_label"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:layout_below="@+id/temperature_label"
+           android:text="@string/blood_pressure_label" 
+           />
+       
+       <TextView
+           android:id="@+id/blood_pressure"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_below="@+id/temperature"
+           android:layout_height="48dp"
+           android:onClick="bpHistory"
+           android:clickable="true"/>
+       
+       <TextView
+           android:id="@+id/heart_rate_label"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:layout_below="@+id/blood_pressure_label"
+           android:text="@string/heart_rate_label" 
+           />
+       
+       <TextView
+           android:id="@+id/heart_rate"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_below="@+id/blood_pressure"
+           android:layout_height="48dp"
+           android:onClick="hrHistory"
+           android:clickable="true"/>
+       
+       <TextView
+           android:id="@+id/symptoms_label"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:layout_below="@+id/heart_rate_label"
+           android:text="@string/symptoms_label" 
+           />
+       
+       <TextView
+           android:id="@+id/symptoms"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_below="@+id/heart_rate"
+           android:layout_height="48dp"
+           android:onClick="symptomsHistory"
+           android:clickable="true"/>
+
+	</RelativeLayout>
+       
+	<RelativeLayout
+	    android:id="@+id/edit"
+	    android:layout_width="match_parent"
+    	android:layout_height="match_parent">
+	    <TextView
+           android:id="@+id/edit_name_label"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:text="@string/patient_name_label" />
+       
+       <EditText
+           android:id="@+id/edit_name"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:inputType="text"/>
+       
+       <TextView
+           android:id="@+id/edit_birth_date_label"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:layout_below="@+id/edit_name_label"
+           android:text="@string/patient_date_label" />
+       
+       <Button
+           android:id="@+id/edit_birth_date"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_below="@+id/edit_name"
+           android:layout_height="48dp"
+           android:onClick="birthDate"/>
+       
+       <TextView
+           android:id="@+id/edit_hcn_label"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:layout_below="@+id/edit_birth_date_label"
+           android:text="@string/patient_hcn_label"/>
+       
+       <EditText
+           android:id="@+id/edit_hcn"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_below="@+id/edit_birth_date"
+           android:layout_height="48dp"
+           android:inputType="text"/>
+       
+       <TextView
+           android:id="@+id/edit_arrival_time_label"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:layout_below="@+id/edit_hcn_label"
+           android:text="@string/arrival_date_label" />
+       
+       <Button 
+           android:id="@+id/edit_arrival_time"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_below="@+id/edit_hcn"
+           android:layout_height="48dp"
+           android:onClick="arrivalTime"/>
+       
+       <TextView
+           android:id="@+id/edit_temperature_label"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:layout_marginTop="20dp"
+           android:layout_below="@+id/edit_arrival_time_label"
+           android:text="@string/temperature_label"/>
+       
+       <EditText
+           android:id="@+id/edit_temperature"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_below="@+id/edit_arrival_time"
+           android:layout_height="48dp"
+           android:layout_marginTop="20dp"
+           android:inputType="phone"/>
+       
+       <TextView
+           android:id="@+id/edit_blood_pressure_label"
+           android:layout_width="fill_parent"
+           android:layout_height="48dp"
+           android:layout_marginTop="20dp"
+           android:layout_below="@+id/edit_temperature_label"
+           android:text="@string/blood_pressure_label" 
+           />
+       
+       <EditText
+        android:id="@+id/edit_systolic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone" 
+        android:layout_toLeftOf="@+id/edit_diastolic"
+        android:layout_below="@+id/edit_blood_pressure_label"
+        android:hint="@string/systolic"/>
+    <EditText
+        android:id="@+id/edit_diastolic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/edit_blood_pressure_label"
+        android:layout_alignParentRight="true"
+        android:inputType="phone" 
+        android:hint="@string/diastolic"/>
+       
+       <TextView
+           android:id="@+id/edit_heart_rate_label"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:layout_below="@+id/edit_systolic"
+           android:text="@string/heart_rate_label" 
+           android:layout_marginTop="20dp"
+           />
+       
+       <EditText
+           android:id="@+id/edit_heart_rate"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_below="@+id/edit_diastolic"
+           android:layout_height="48dp"
+           android:layout_marginTop="20dp"
+           android:inputType="phone"/>
+       
+       <TextView
+           android:id="@+id/edit_symptoms_label"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:layout_marginTop="20dp"
+           android:layout_below="@+id/edit_heart_rate_label"
+           android:text="@string/symptoms_label" 
+           />
+       
+       <EditText
+           android:id="@+id/edit_symptoms"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_below="@+id/edit_heart_rate"
+           android:layout_height="48dp"
+           android:layout_marginTop="20dp"
+           android:inputType="textMultiLine" />
+
+	<Button
+         android:id="@+id/edit_save"
+         android:layout_width="wrap_content"
+         android:layout_height="48dp"
+         android:layout_below="@+id/edit_symptoms"
+         android:layout_alignParentBottom="true"
+         android:layout_centerHorizontal="true"
+         android:onClick="save"
+         android:text="@string/action_edit" />
+	</RelativeLayout>
+	</RelativeLayout>
+</ScrollView>
+</RelativeLayout>
+
+
+
